@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 import AppErrorBoundary from './components/AppErrorBoundary.jsx'
+import LocalSearchHost from './components/LocalSearchHost.jsx'
 import Overlay from './components/Overlay.jsx'
 import { applyAccent, loadStoredAccentId } from './utils/accent'
 import { detectWindowLabel } from './utils/tauri'
@@ -18,7 +19,7 @@ if (typeof document !== 'undefined') {
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <AppErrorBoundary>
-      {windowLabel === 'popover' ? <Overlay /> : <App />}
+      {windowLabel === 'popover' ? <Overlay /> : <><App /><LocalSearchHost /></>}
     </AppErrorBoundary>
   </StrictMode>,
 )
