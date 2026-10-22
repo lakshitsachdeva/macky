@@ -600,7 +600,7 @@ function DebugPanel({ debugPayload, selectedDebugRow }) {
 }
 
 // ─── Main overlay component ──────────────────────────────────────────────────
-function Overlay() {
+function Overlay({ onClose }) {
   const inputRef = useRef(null)
   const rootRef = useRef(null)
   const wrapRef = useRef(null)
@@ -876,7 +876,8 @@ function Overlay() {
     setIsAsking(false)
     setConversationHistory([])  // clear thread on close
     await invokeIfTauri('hide_overlay')
-  }, [])
+    onClose?.()
+  }, [onClose])
 
   const handleCopyAnswer = useCallback(() => {
     if (!askAnswer?.text) return

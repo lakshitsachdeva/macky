@@ -245,6 +245,7 @@ These checks establish software behavior in this workspace. They do not establis
 - [Forensic workflow](docs/forensic-workflow.md)
 - [Forensic case lab](docs/demo/forensic-case-lab.md)
 - [Live demo run](docs/demo/forensic-demo-run-2026-10-22.md)
+- [Local forensic case playbooks](docs/demo/local-forensic-case-playbooks.md)
 - [Forensic boundaries](docs/forensic-boundaries.md)
 - [Privacy](docs/privacy.md)
 - [Security model](docs/security.md)

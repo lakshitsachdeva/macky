@@ -2137,6 +2137,22 @@ body::after {
 
 /* ─── Overlay shell ──────────────────────────────────────────────────────── */
 
+.local-search-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.16);
+}
+
+.local-search-overlay > .overlay-root {
+  width: min(100%, 712px);
+  padding: 0;
+}
+
 .overlay-root {
   width: 100%;
   padding: 12px 16px 10px;
