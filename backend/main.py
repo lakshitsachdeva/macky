@@ -2011,6 +2011,7 @@ class UserSettingsUpdate(StrictRequestModel):
 
 class AdminConfigRequest(StrictRequestModel):
     model: Literal[
+        "gemini-3.8-flash",
         "gemini-2.5-flash",
         "gemini-2.0-flash",
         "gemini-2.0-flash-lite",
@@ -4903,6 +4904,7 @@ async def admin_config(body: AdminConfigRequest, request: Request) -> dict[str, 
         return value
 
     allowed_models = {
+        "gemini-3.8-flash",
         "gemini-2.5-flash",
         "gemini-2.0-flash",
         "gemini-2.0-flash-lite",

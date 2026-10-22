@@ -212,7 +212,10 @@ def _default_embedding_model() -> str:
 EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", _default_embedding_model())
 BGE_MODEL_NAME = EMBEDDING_MODEL
 TEXT_EMBEDDING_DIM = 768
-ENRICHMENT_MODEL = os.getenv("ENRICHMENT_MODEL", "gemini-2.0-flash")
+# Gemini 2.0 Flash was shut down. Keep the default on a currently served
+# structured-output-capable Flash endpoint; operators can override this in the
+# ignored data/backend.env file without changing source code.
+ENRICHMENT_MODEL = os.getenv("ENRICHMENT_MODEL", "gemini-3.8-flash")
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
 HAS_GEMINI_SDK = _has_optional_module("google.generativeai")
 # Gemini vision sends image bytes to Google — off by default for privacy.
