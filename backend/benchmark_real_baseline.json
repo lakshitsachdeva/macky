@@ -1,0 +1,533 @@
+{
+  "base": "http://127.0.0.1:56224",
+  "saved_at": "2026-03-24T15:55:46+0530",
+  "summary": {
+    "count": 37,
+    "top1_hits": 37,
+    "top3_hits": 37,
+    "top1_rate": 1.0,
+    "top3_rate": 1.0,
+    "p50_ms": 120.6,
+    "p95_ms": 259.5
+  },
+  "results": [
+    {
+      "query": "recurdo bible",
+      "expected": "recurdo bible",
+      "description": "exact product bible lookup",
+      "top1": true,
+      "top3": true,
+      "latency_ms": 1534.8,
+      "top_result": "Recurdo_BIBLE.pdf",
+      "top3_results": [
+        "Recurdo_BIBLE.pdf",
+        "RECURDO_PRODUCTION_READINESS.md",
+        "RECURDO_INDEXING_SPEED_FIXES.md"
+      ]
+    },
+    {
+      "query": "production readiness",
+      "expected": "production readiness",
+      "description": "release readiness plan",
+      "top1": true,
+      "top3": true,
+      "latency_ms": 133.3,
+      "top_result": "RECURDO_PRODUCTION_READINESS.md",
+      "top3_results": [
+        "RECURDO_PRODUCTION_READINESS.md",
+        "marketing m1 notes final .pdf",
+        "CEM M1.pdf"
+      ]
+    },
+    {
+      "query": "indexing speed audit",
+      "expected": "indexing speed audit",
+      "description": "indexing audit notes",
+      "top1": true,
+      "top3": true,
+      "latency_ms": 132.8,
+      "top_result": "RECURDO_INDEXING_SPEED_AUDIT.md",
+      "top3_results": [
+        "RECURDO_INDEXING_SPEED_AUDIT.md",
+        "RECURDO_INDEXING_SPEED_FIXES.md",
+        "RECURDO_AUDIT_FIX_PROMPTS.md"
+      ]
+    },
+    {
+      "query": "indexing speed fixes",
+      "expected": "indexing speed fixes",
+      "description": "fix follow-up notes",
+      "top1": true,
+      "top3": true,
+      "latency_ms": 92.9,
+      "top_result": "RECURDO_INDEXING_SPEED_FIXES.md",
+      "top3_results": [
+        "RECURDO_INDEXING_SPEED_FIXES.md",
+        "RECURDO_INDEXING_SPEED_AUDIT.md",
+        "RECURDO_AUDIT_FIX_PROMPTS.md"
+      ]
+    },
+    {
+      "query": "elevator pitch guide",
+      "expected": "elevator pitch guide",
+      "description": "messaging / GTM doc",
+      "top1": true,
+      "top3": true,
+      "latency_ms": 112.7,
+      "top_result": "Recurdo_Elevator_Pitch_Guide.md",
+      "top3_results": [
+        "Recurdo_Elevator_Pitch_Guide.md",
+        "ArithRetrieval_ImplementationGuide.md",
+        "API_SETUP.md"
+      ]
+    },
+    {
+      "query": "complete deep dive",
+      "expected": "complete deep dive",
+      "description": "deep technical/product overview",
+      "top1": true,
+      "top3": true,
+      "latency_ms": 116.6,
+      "top_result": "c40a9bd0-a5c7-4b98-bdf7-23ad3e6bed5b_Recurdo_Complete_Deep_Dive.pdf",
+      "top3_results": [
+        "c40a9bd0-a5c7-4b98-bdf7-23ad3e6bed5b_Recurdo_Complete_Deep_Dive.pdf",
+        "PROJECT_DEEP_DIVE.md",
+        "Recurdo_Complete_Deep_Dive.md"
+      ]
+    },
+    {
+      "query": "memex how it works",
+      "expected": "memex how it works",
+      "description": "design/architecture doc",
+      "top1": true,
+      "top3": true,
+      "latency_ms": 95.7,
+      "top_result": "Memex_How_It_Works.docx",
+      "top3_results": [
+        "Memex_How_It_Works.docx",
+        "UNIT 4Behavioral Modeling.pdf",
+        "codex-laser-fix-complete.md"
+      ]
+    },
+    {
+      "query": "personal memory blueprint",
+      "expected": "personal memory engine blueprint",
+      "description": "product blueprint",
+      "top1": true,
+      "top3": true,
+      "latency_ms": 129.8,
+      "top_result": "PERSONAL_MEMORY_ENGINE_BLUEPRINT.md",
+      "top3_results": [
+        "PERSONAL_MEMORY_ENGINE_BLUEPRINT.md",
+        "CODEX_PROMPTS_MEMORY_ENGINE.md",
+        "CODEX_PROMPTS_V2_FINAL.md"
+      ]
+    },
+    {
+      "query": "proposal iitb pdf",
+      "expected": "proposal iitb",
+      "description": "proposal exact pdf lookup",
+      "top1": true,
+      "top3": true,
+      "latency_ms": 114.6,
+      "top_result": "proposal_iitb (1).pdf",
+      "top3_results": [
+        "proposal_iitb (1).pdf",
+        "proposal_iitb.pdf",
+        "SIH2025.pdf"
+      ]
+    },
+    {
+      "query": "proposal iitb docx",
+      "expected": "proposal iitb",
+      "description": "proposal editable doc lookup",
+      "top1": true,
+      "top3": true,
+      "latency_ms": 90.4,
+      "top_result": "proposal_iitb (1).docx",
+      "top3_results": [
+        "proposal_iitb (1).docx",
+        "proposal_iitb (1).pdf",
+        "proposal_iitb.pdf"
+      ]
+    },
+    {
+      "query": "arithretrieval proposal",
+      "expected": "arithretrieval proposal",
+      "description": "specific research proposal",
+      "top1": true,
+      "top3": true,
+      "latency_ms": 259.5,
+      "top_result": "ArithRetrieval_Proposal.docx",
+      "top3_results": [
+        "ArithRetrieval_Proposal.docx",
+        "outreach_strategy.md",
+        "email_flipkart.txt"
+      ]
+    },
+    {
+      "query": "lakshit resume",
+      "expected": "lakshit resume",
+      "description": "resume lookup",
+      "top1": true,
+      "top3": true,
+      "latency_ms": 185.5,
+      "top_result": "Resume Lakshit.pdf",
+      "top3_results": [
+        "Resume Lakshit.pdf",
+        "Lakshit_Resume.pdf",
+        "resume_lakshit.pdf"
+      ]
+    },
+    {
+      "query": "iima application",
+      "expected": "iima application",
+      "description": "application doc",
+      "top1": true,
+      "top3": true,
+      "latency_ms": 156.3,
+      "top_result": "iima_application.docx",
+      "top3_results": [
+        "iima_application.docx",
+        "B102_Experiment7_MAD.pdf",
+        "B102_Experiment9_MAD.pdf"
+      ]
+    },
+    {
+      "query": "outreach strategy",
+      "expected": "outreach strategy",
+      "description": "outreach planning doc",
+      "top1": true,
+      "top3": true,
+      "latency_ms": 122.2,
+      "top_result": "outreach_strategy.md",
+      "top3_results": [
+        "outreach_strategy.md",
+        "SIFT_STRATEGY_DOCUMENT.md",
+        "Lakshit_Resume_Final.docx"
+      ]
+    },
+    {
+      "query": "email iitb",
+      "expected": "email iitb",
+      "description": "draft mail lookup",
+      "top1": true,
+      "top3": true,
+      "latency_ms": 127.5,
+      "top_result": "email_iitb.txt",
+      "top3_results": [
+        "email_iitb.txt",
+        "proposal_iitb (1).docx",
+        "proposal_iitb (1).pdf"
+      ]
+    },
+    {
+      "query": "autodesk backup code",
+      "expected": "autodesk backup code",
+      "description": "credential/code note",
+      "top1": true,
+      "top3": true,
+      "latency_ms": 124.4,
+      "top_result": "autodesk_backup_code.txt",
+      "top3_results": [
+        "autodesk_backup_code.txt",
+        "PROJECT_DEEP_DIVE_MASTER.md",
+        "B097_DC_lab7.docx"
+      ]
+    },
+    {
+      "query": "interior design project 2",
+      "expected": "interior design project2",
+      "description": "course project document",
+      "top1": true,
+      "top3": true,
+      "latency_ms": 126.2,
+      "top_result": "Interior_Design_Project2_Lakshit_Sachdeva.docx",
+      "top3_results": [
+        "Interior_Design_Project2_Lakshit_Sachdeva.docx",
+        "Interior Design Project 1 on Space Management.pdf",
+        "Project 2 on Colour & Texture Management (1).pdf"
+      ]
+    },
+    {
+      "query": "sequence of submission docx",
+      "expected": "sequence of submission",
+      "description": "exact admin doc lookup",
+      "top1": true,
+      "top3": true,
+      "latency_ms": 110.1,
+      "top_result": "Format for Title Page and Index with sequence of submission.docx",
+      "top3_results": [
+        "Format for Title Page and Index with sequence of submission.docx",
+        "Format for Title Page and Index with sequence of submission (1).docx",
+        "B102_PD04_TestingDocument.docx"
+      ]
+    },
+    {
+      "query": "program security pdf",
+      "expected": "program security pdf",
+      "description": "prefer pdf over slides",
+      "top1": true,
+      "top3": true,
+      "latency_ms": 127.3,
+      "top_result": "Unit-5-Program Security.pdf",
+      "top3_results": [
+        "Unit-5-Program Security.pdf",
+        "Course Policy-Cyber Security 2025-26.pdf",
+        "OS by Stallings.pdf"
+      ]
+    },
+    {
+      "query": "program security slides",
+      "expected": "program security pptx",
+      "description": "prefer presentation over pdf",
+      "top1": true,
+      "top3": true,
+      "latency_ms": 135.4,
+      "top_result": "Unit-5-Program Security.pptx",
+      "top3_results": [
+        "Unit-5-Program Security.pptx",
+        "Unit-1-Introduction.pptx",
+        "Unit-5-Program Security.pdf"
+      ]
+    },
+    {
+      "query": "access control pdf",
+      "expected": "access control pdf",
+      "description": "prefer pdf over slides",
+      "top1": true,
+      "top3": true,
+      "latency_ms": 247.3,
+      "top_result": "Unit-4-Access control.pdf",
+      "top3_results": [
+        "Unit-4-Access control.pdf",
+        "Recurdo_BIBLE.pdf",
+        "OS by Stallings.pdf"
+      ]
+    },
+    {
+      "query": "access control slides",
+      "expected": "access control pptx",
+      "description": "prefer presentation over pdf",
+      "top1": true,
+      "top3": true,
+      "latency_ms": 120.2,
+      "top_result": "Unit-4-Access control.pptx",
+      "top3_results": [
+        "Unit-4-Access control.pptx",
+        "Unit-1-Introduction.pptx",
+        "Unit-3-Authentication.pptx"
+      ]
+    },
+    {
+      "query": "mid term test 2 interior design pdf",
+      "expected": "mid term test 2",
+      "description": "interior design notes",
+      "top1": true,
+      "top3": true,
+      "latency_ms": 100.7,
+      "top_result": "Notes for Mid-Term Test 2 Sem VI AY 2025-26 of Interior Design.pdf",
+      "top3_results": [
+        "Notes for Mid-Term Test 2 Sem VI AY 2025-26 of Interior Design.pdf",
+        "Interior Design Notes for Class Test1.pdf",
+        "Interior Design Project 1 on Space Management.pdf"
+      ]
+    },
+    {
+      "query": "dns ids project guide",
+      "expected": "dns ids project guide",
+      "description": "project guide exact lookup",
+      "top1": true,
+      "top3": true,
+      "latency_ms": 86.4,
+      "top_result": "DNS_IDS_Project_Guide.md",
+      "top3_results": [
+        "DNS_IDS_Project_Guide.md",
+        "DNS_IDS_Codex_Prompts.md",
+        "DEPLOYMENT_GUIDE.md"
+      ]
+    },
+    {
+      "query": "dns ids codex prompts",
+      "expected": "dns ids codex prompts",
+      "description": "prompt pack exact lookup",
+      "top1": true,
+      "top3": true,
+      "latency_ms": 100.8,
+      "top_result": "DNS_IDS_Codex_Prompts.md",
+      "top3_results": [
+        "DNS_IDS_Codex_Prompts.md",
+        "CODEX_PROMPTS_MEMORY_ENGINE.md",
+        "CODEX_PROMPTS_V2_FINAL.md"
+      ]
+    },
+    {
+      "query": "singapore malaysia expense xlsx",
+      "expected": "singapore malaysia trip expense",
+      "description": "travel spreadsheet",
+      "top1": true,
+      "top3": true,
+      "latency_ms": 98.5,
+      "top_result": "Singapore & Malaysia Trip Expense Dec 25.xlsx",
+      "top3_results": [
+        "Singapore & Malaysia Trip Expense Dec 25.xlsx",
+        "Trip_Settlement_From_Word_Doc.xlsx",
+        "trip expenditure final.docx"
+      ]
+    },
+    {
+      "query": "trip settlement master",
+      "expected": "trip settlement master",
+      "description": "settlement spreadsheet",
+      "top1": true,
+      "top3": true,
+      "latency_ms": 168.5,
+      "top_result": "Trip_Settlement_Master.xlsx",
+      "top3_results": [
+        "Trip_Settlement_Master.xlsx",
+        "trip expenditure final.docx",
+        "TRIP EXPENSES.docx"
+      ]
+    },
+    {
+      "query": "peer review log",
+      "expected": "peer review log",
+      "description": "exact spreadsheet log lookup",
+      "top1": true,
+      "top3": true,
+      "latency_ms": 116.7,
+      "top_result": "B102_PeerReviewLog.xlsx",
+      "top3_results": [
+        "B102_PeerReviewLog.xlsx",
+        "Software Quality Assurance From Theory to Implementation.pdf",
+        "Risk_Monitoring_Log_Practical4.xlsx"
+      ]
+    },
+    {
+      "query": "bug report spreadsheet",
+      "expected": "bug report",
+      "description": "bug-report spreadsheet lookup",
+      "top1": true,
+      "top3": true,
+      "latency_ms": 120.0,
+      "top_result": "B102_TestCases_BugReport.xlsx",
+      "top3_results": [
+        "B102_TestCases_BugReport.xlsx",
+        "B102_PeerReviewLog.xlsx",
+        "Defect_Tracking.xlsx"
+      ]
+    },
+    {
+      "query": "gate mega sheet",
+      "expected": "gate mega sheet",
+      "description": "important exam spreadsheet",
+      "top1": true,
+      "top3": true,
+      "latency_ms": 130.4,
+      "top_result": "GATE MEGA SHEET NEW.xlsx",
+      "top3_results": [
+        "GATE MEGA SHEET NEW.xlsx",
+        "GATE_MEGA_SHEET_NEW.pdf.pdf",
+        "wide quant prompts 32587bc83f0180498b05d2a9764a61b7.md"
+      ]
+    },
+    {
+      "query": "risk monitoring log",
+      "expected": "risk monitoring log",
+      "description": "risk log spreadsheet",
+      "top1": true,
+      "top3": true,
+      "latency_ms": 216.8,
+      "top_result": "Risk_Monitoring_Log_Practical4.xlsx",
+      "top3_results": [
+        "Risk_Monitoring_Log_Practical4.xlsx",
+        "Risk_Monitoring_Log.csv",
+        "B102_Exp4_SQA.pdf"
+      ]
+    },
+    {
+      "query": "sunlight living dining room",
+      "expected": "sunlight space living and dining room",
+      "description": "image title/visual lookup",
+      "top1": true,
+      "top3": true,
+      "latency_ms": 120.6,
+      "top_result": "Sunlight space_living and dining room-3.jpeg",
+      "top3_results": [
+        "Sunlight space_living and dining room-3.jpeg",
+        "Wabi-sabi Style Living and Dining Room - LivingDiningRoom_Living and Dining Room-2.jpg",
+        "Sunlight space_living and dining room-5.jpeg"
+      ]
+    },
+    {
+      "query": "wabi sabi living dining room",
+      "expected": "wabi sabi living dining room",
+      "description": "image style lookup",
+      "top1": true,
+      "top3": true,
+      "latency_ms": 92.4,
+      "top_result": "Wabi-sabi Style Living and Dining Room - LivingDiningRoom_Living and Dining Room-2.jpg",
+      "top3_results": [
+        "Wabi-sabi Style Living and Dining Room - LivingDiningRoom_Living and Dining Room-2.jpg",
+        "Sunlight space_living and dining room-3.jpeg",
+        "Wabi-sabi Style Living and Dining Room - LivingDiningRoom_Living and Dining Room-2.jpeg"
+      ]
+    },
+    {
+      "query": "adobe scan removed",
+      "expected": "adobe scan 18 mar 2026 removed",
+      "description": "scanned pdf variant",
+      "top1": true,
+      "top3": true,
+      "latency_ms": 111.4,
+      "top_result": "Adobe Scan 18 Mar 2026_removed.pdf",
+      "top3_results": [
+        "Adobe Scan 18 Mar 2026_removed.pdf",
+        "SIFT_CODEX_PROMPTS_V3.md",
+        "RECURDO_PRODUCTION_READINESS.md"
+      ]
+    },
+    {
+      "query": "ie delhi 22 march",
+      "expected": "ie delhi 22 03 2026",
+      "description": "date-heavy pdf lookup",
+      "top1": true,
+      "top3": true,
+      "latency_ms": 128.9,
+      "top_result": "IE Delhi\u00b0 22-03-2026.pdf",
+      "top3_results": [
+        "IE Delhi\u00b0 22-03-2026.pdf",
+        "NS_CG_K2R.pdf",
+        "4e751959-00a8-40a6-9de6-1400531558ef_ATHAIR.pdf"
+      ]
+    },
+    {
+      "query": "athair complete bible",
+      "expected": "athair complete bible",
+      "description": "brand bible lookup",
+      "top1": true,
+      "top3": true,
+      "latency_ms": 111.2,
+      "top_result": "ATHAIR_COMPLETE_BIBLE.md",
+      "top3_results": [
+        "ATHAIR_COMPLETE_BIBLE.md",
+        "4e751959-00a8-40a6-9de6-1400531558ef_ATHAIR.pdf",
+        "athair_deep_doc.md"
+      ]
+    },
+    {
+      "query": "linear regression slides",
+      "expected": "linear regression",
+      "description": "presentation lookup",
+      "top1": true,
+      "top3": true,
+      "latency_ms": 115.6,
+      "top_result": "linear regression - example.pptx",
+      "top3_results": [
+        "linear regression - example.pptx",
+        "linear regression.pptx",
+        "linear regression.pdf"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recurdo — returning to the app</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        font-family:
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Helvetica,
+          Arial,
+          sans-serif;
+        background: #080808;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 32px;
+        background:
+          radial-gradient(circle at top, rgba(99, 102, 241, 0.1), transparent 28%),
+          linear-gradient(180deg, #090909 0%, #080808 30%, #060606 100%);
+        color: #d4d4d4;
+      }
+
+      .panel {
+        width: min(100%, 720px);
+        padding: 48px 32px;
+        border-radius: 28px;
+        border: 1px solid #0e0e0e;
+        background:
+          radial-gradient(circle at top, rgba(99, 102, 241, 0.08), transparent 44%),
+          linear-gradient(180deg, rgba(13, 13, 13, 0.98), rgba(10, 10, 10, 0.98));
+        box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+        text-align: center;
+      }
+
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        padding: 8px 14px;
+        border-radius: 999px;
+        border: 1px solid rgba(99, 102, 241, 0.3);
+        background: rgba(99, 102, 241, 0.14);
+        color: #818cf8;
+        font-size: 12px;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 22px 0 0;
+        color: #e8e8e8;
+        font-size: clamp(32px, 5vw, 48px);
+        letter-spacing: -0.03em;
+      }
+
+      p {
+        max-width: 580px;
+        margin: 24px auto 0;
+        color: #9b9b9b;
+        font-size: 17px;
+        line-height: 1.8;
+      }
+
+      .actions {
+        display: flex;
+        justify-content: center;
+        gap: 14px;
+        flex-wrap: wrap;
+        margin-top: 32px;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 184px;
+        padding: 14px 22px;
+        border-radius: 999px;
+        border: 1px solid #1d1d1d;
+        font-size: 14px;
+        font-weight: 600;
+        text-decoration: none;
+        cursor: pointer;
+        transition: transform 160ms ease, border-color 160ms ease, background 160ms ease, color 160ms ease;
+      }
+
+      .button:hover {
+        transform: translateY(-1px);
+      }
+
+      .button-primary {
+        background: rgba(99, 102, 241, 0.18);
+        border-color: rgba(99, 102, 241, 0.34);
+        color: #d8dcff;
+      }
+
+      .button-secondary {
+        background: rgba(255, 255, 255, 0.03);
+        color: #b0b0b0;
+      }
+
+      .note {
+        margin-top: 22px;
+        color: #6a6a6a;
+        font-size: 13px;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="panel">
+      <div class="pill">desktop sign-in</div>
+      <h1 id="title">returning you to recurdo</h1>
+      <p id="message">
+        Your browser finished authentication. Recurdo should open automatically in a moment.
+      </p>
+      <div class="actions" id="actions" hidden>
+        <a class="button button-primary" id="open-link" href="/">open recurdo</a>
+        <button class="button button-secondary" id="retry-button" type="button">try again</button>
+      </div>
+      <p class="note">
+        If the app does not open, make sure Recurdo is installed in /Applications and press the button above once.
+      </p>
+    </main>
+
+    <script>
+      const params = (() => {
+        const hash = window.location.hash.replace(/^#/, '')
+        const search = window.location.search.replace(/^\?/, '')
+        const merged = [search, hash].filter(Boolean).join('&')
+        return new URLSearchParams(merged)
+      })()
+
+      const payload = new URLSearchParams()
+      const token = params.get('access_token') || ''
+      const refreshToken = params.get('refresh_token') || ''
+      const email = params.get('email') || ''
+      const state = params.get('desktop_state') || params.get('state') || ''
+      const error = params.get('error') || ''
+      const errorDescription = params.get('error_description') || ''
+
+      if (token) payload.set('access_token', token)
+      if (refreshToken) payload.set('refresh_token', refreshToken)
+      if (email) payload.set('email', email)
+      if (state) payload.set('state', state)
+      if (error) payload.set('error', error)
+      if (errorDescription) payload.set('error_description', errorDescription)
+
+      const deepLink = payload.toString()
+        ? `recurdo://auth/callback?${payload.toString()}`
+        : ''
+
+      const title = document.getElementById('title')
+      const message = document.getElementById('message')
+      const actions = document.getElementById('actions')
+      const openLink = document.getElementById('open-link')
+      const retryButton = document.getElementById('retry-button')
+
+      const launch = () => {
+        if (!deepLink) return
+        window.location.replace(deepLink)
+      }
+
+      if (error) {
+        title.textContent = 'sign-in needs your attention'
+        message.textContent = errorDescription || error
+      } else if (!deepLink) {
+        title.textContent = 'nothing to hand back'
+        message.textContent =
+          'This page is only used to finish desktop sign-in. You can close it and return to Recurdo.'
+      } else {
+        actions.hidden = false
+        openLink.href = deepLink
+        retryButton.addEventListener('click', launch)
+        window.setTimeout(launch, 120)
+      }
+    </script>
+  </body>
+</html>

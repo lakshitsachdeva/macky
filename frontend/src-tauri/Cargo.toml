@@ -1,0 +1,44 @@
+[package]
+name = "recurdo-everywhere"
+version = "0.2.0"
+description = "Recurdo desktop app"
+authors = ["Lakshit Sachdeva"]
+license = ""
+repository = ""
+edition = "2021"
+rust-version = "1.77.2"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+name = "recurdo_everywhere_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = ["tray-icon", "macos-private-api", "image-png"] }
+tauri-plugin-global-shortcut = "2"
+tauri-plugin-dialog = "2"
+tauri-plugin-shell = "2"
+tauri-plugin-log = "2"
+tauri-plugin-deep-link = "2"
+tauri-plugin-autostart = "2"
+open = "5"
+dirs = "5"
+urlencoding = "2"
+chrono = { version = "0.4", features = ["serde"] }
+tokio = { version = "1", features = ["time"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+log = "0.4"
+dpi = "0.1"
+
+[target.'cfg(target_os = "macos")'.dependencies]
+objc2 = "0.6"
+objc2-app-kit = "0.3"
+
+[target.'cfg(any(target_os = "macos", windows, target_os = "linux"))'.dependencies]
+tauri-plugin-process = "2"
+tauri-plugin-updater = "2"

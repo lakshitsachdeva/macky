@@ -1,0 +1,83 @@
+{
+  "$schema": "../node_modules/@tauri-apps/cli/config.schema.json",
+  "productName": "Custody",
+  "version": "0.2.0",
+  "identifier": "com.recurdoeverywhere.app",
+  "build": {
+    "frontendDist": "../dist",
+    "devUrl": "http://localhost:5173",
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "VITE_SUPABASE_URL=\"$SUPABASE_URL\" VITE_SUPABASE_ANON_KEY=\"$SUPABASE_ANON_KEY\" npm run build"
+  },
+  "app": {
+    "withGlobalTauri": true,
+    "macOSPrivateApi": true,
+    "windows": [
+      {
+        "label": "popover",
+        "title": "Custody",
+        "width": 680,
+        "height": 520,
+        "resizable": false,
+        "decorations": false,
+        "transparent": true,
+        "alwaysOnTop": true,
+        "visibleOnAllWorkspaces": true,
+        "visible": false,
+        "skipTaskbar": true,
+        "shadow": false,
+        "center": false
+      },
+      {
+        "label": "settings",
+        "title": "Custody — Settings",
+        "width": 860,
+        "height": 600,
+        "resizable": true,
+        "decorations": true,
+        "visible": true,
+        "skipTaskbar": false,
+        "center": true
+      }
+    ],
+    "security": {
+      "csp": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: asset: https:; connect-src 'self' http://127.0.0.1:* ws://127.0.0.1:* http://localhost:* ws://localhost:* https://*.supabase.co https://generativelanguage.googleapis.com https://recurdo.lakshitsachdeva.tech"
+    },
+    "trayIcon": {
+      "iconPath": "icons/tray-icon.png",
+      "iconAsTemplate": true,
+      "menuOnLeftClick": false
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["app", "dmg"],
+    "createUpdaterArtifacts": true,
+    "macOS": {
+      "minimumSystemVersion": "13.0"
+    },
+    "resources": {
+      "../../backend/dist/recurdo-backend": "backend/recurdo-backend"
+    },
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ]
+  },
+  "plugins": {
+    "deep-link": {
+      "desktop": {
+        "schemes": ["recurdo"]
+      }
+    },
+    "updater": {
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDRCMjE2MTYwQzFCNEY2MDUKUldRRjlyVEJZR0VoUyt6SHNNMEZTK0RjMVU2c1dhalFmV0JBTFcvYVVnUldEY2t0UjNQZkg5WXMK",
+      "endpoints": [
+        "https://recurdo.lakshitsachdeva.tech/api/update?target={{target}}&arch={{arch}}&current={{current_version}}"
+      ]
+    }
+  }
+}

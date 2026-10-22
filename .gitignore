@@ -1,0 +1,44 @@
+data/
+venv/
+venv311/
+.venv*/
+__pycache__/
+.env
+.env.local
+.env.*
+!.env.example
+node_modules/
+dist/
+*.pyc
+.DS_Store
+*.log
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.run/
+*.pid
+build/
+backend.spec
+backend/recurdo-backend.spec
+backend/build/
+backend/dist/
+backend/memory_engine.db
+backend/models/
+landing/.vercel/
+
+# Local recovery notes and historical handoffs may contain private paths,
+# screenshots, deployment details, or stale product claims. The public release
+# uses docs/ as its canonical documentation surface.
+CODEX_HANDOFF.md
+HANDOFF.md
+PRIVATE_BETA_RELEASE.md
+RECURDO_AUDIT_REPORT_*.md
+RESTORE_POINTS.md
+CHANGES.md
+PROJECT_DEEP_DIVE.md
+PRODUCTION_READINESS.md
+ROADMAP.md
+UNIFIED_MASTER_PROGRESS.md
+*.dmg
+*.app/
+pytest-cache-files-*/
